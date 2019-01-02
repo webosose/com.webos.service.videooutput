@@ -1,0 +1,33 @@
+{
+	"outputs" : [
+		{
+			"name" : "videooutputd-log",
+			"file" : "@WEBOS_INSTALL_LOGDIR@/videooutputd.log",
+			"maxSize" : 2000,
+			"rotations" : 5
+		}
+	],
+
+	"contexts" : [
+	{
+		"name" : "videooutputd",
+			"level" : "debug",
+			"logProcessIds" : false,
+			"logThreadIds" : false,
+			"logToConsole" : false,
+			"rules" : [
+			    { "filter" : "*.*", "output" : "videooutputd-log" }
+		]
+	},
+	{
+		"name" : "val-rpi",
+			"level" : "debug",
+			"logProcessIds" : false,
+			"logThreadIds" : false,
+			"logToConsole" : false,
+			"rules" : [
+			    { "filter" : "*.*", "output" : "videooutputd-log" }
+		]
+	}
+	]
+}

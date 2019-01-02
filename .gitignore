@@ -1,0 +1,11 @@
+oe-logs
+oe-workdir
+build
+*.swp
+*.tmp
+*.stamp
+*.patch
+*.orig
+*.rej
+tags
+singletask.lock

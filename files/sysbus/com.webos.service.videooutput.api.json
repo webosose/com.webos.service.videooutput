@@ -1,0 +1,61 @@
+{
+  "media": [
+    "com.webos.service.videooutput/register",
+    "com.webos.service.videooutput/unregister",
+    "com.webos.service.videooutput/connect",
+    "com.webos.service.videooutput/disconnect",
+    "com.webos.service.videooutput/getStatus",
+    "com.webos.service.videooutput/blankVideo",
+    "com.webos.service.videooutput/setVideoData",
+    "com.webos.service.videooutput/display/getVideoLimits",
+    "com.webos.service.videooutput/display/getOutputCapabilities",
+    "com.webos.service.videooutput/display/setDisplayWindow",
+    "com.webos.service.videooutput/display/setCompositing",
+    "com.webos.service.videooutput/display/setDisplayResolution",
+    "com.webos.service.videooutput/display/getSupportedResolution",
+    "com.webos.service.videooutput/display/setParam",
+    "com.webos.service.videooutput/display/getParam",
+
+    "com.webos.service.videooutput/systemproperty/getProperties"
+  ],
+
+  "public": [
+    "com.webos.service.videooutput/register",
+    "com.webos.service.videooutput/unregister",
+    "com.webos.service.videooutput/connect",
+    "com.webos.service.videooutput/disconnect",
+    "com.webos.service.videooutput/getStatus",
+    "com.webos.service.videooutput/blankVideo",
+    "com.webos.service.videooutput/setVideoData",
+    "com.webos.service.videooutput/display/getVideoLimits",
+    "com.webos.service.videooutput/display/getOutputCapabilities",
+    "com.webos.service.videooutput/display/setDisplayWindow",
+    "com.webos.service.videooutput/display/setCompositing",
+    "com.webos.service.videooutput/display/setDisplayResolution",
+    "com.webos.service.videooutput/display/getSupportedResolution",
+    "com.webos.service.videooutput/display/setParam",
+    "com.webos.service.videooutput/display/getParam",
+
+    "com.webos.service.videooutput/systemproperty/getProperties"
+  ],
+
+  "private": [
+    "com.webos.service.videooutput/register",
+    "com.webos.service.videooutput/unregister",
+    "com.webos.service.videooutput/connect",
+    "com.webos.service.videooutput/disconnect",
+    "com.webos.service.videooutput/getStatus",
+    "com.webos.service.videooutput/blankVideo",
+    "com.webos.service.videooutput/setVideoData",
+    "com.webos.service.videooutput/display/getVideoLimits",
+    "com.webos.service.videooutput/display/getOutputCapabilities",
+    "com.webos.service.videooutput/display/setDisplayWindow",
+    "com.webos.service.videooutput/display/setCompositing",
+    "com.webos.service.videooutput/display/setDisplayResolution",
+    "com.webos.service.videooutput/display/getSupportedResolution",
+    "com.webos.service.videooutput/display/setParam",
+    "com.webos.service.videooutput/display/getParam",
+
+    "com.webos.service.videooutput/systemproperty/getProperties"
+  ]
+}

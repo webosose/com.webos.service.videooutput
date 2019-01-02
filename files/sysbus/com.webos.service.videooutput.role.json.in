@@ -1,0 +1,13 @@
+{
+    "exeName":"@WEBOS_INSTALL_SBINDIR@/videooutputd",
+    "type": "regular",
+    "allowedNames": ["com.webos.service.videooutput"],
+    "permissions": [
+        {
+            "service":"com.webos.service.videooutput",
+            "outbound":[
+                "com.webos.service.settings"
+            ]
+        }
+    ]
+}
