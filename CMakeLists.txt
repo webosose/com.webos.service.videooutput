@@ -71,7 +71,9 @@ if("${WEBOS_TARGET_MACHINE}" MATCHES "raspberrypi*")
     add_definitions(-DUMS_INTERNAL_API_VERSION2)
     set(ARC_SOURCE aspectratiocontrol.cpp)
 else()
+# case for qemux86 build
     message(STATUS "Using unknown machine")
+    set(ARC_SOURCE aspectratiocontrol.cpp)
 endif()
 
 file(GLOB SOURCE_FILES
