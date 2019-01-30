@@ -16,7 +16,7 @@
 
 cmake_minimum_required(VERSION 2.8.7)
 
-project(videooutputd CXX)
+project(com.webos.service.videooutput CXX)
 include(webOS/webOS)
 webos_modules_init(1 0 0 QUALIFIER RC7)
 webos_component(1 0 0)
@@ -107,8 +107,13 @@ target_link_libraries(${BIN_NAME}
         rt
         pthread)
 
-webos_build_daemon()
+# Install
+#webos_build_daemon()
 webos_build_system_bus_files()
-webos_build_configured_file(files/conf/pmlog/videooutputd.conf SYSCONFDIR pmlog.d)
+webos_build_configured_file(files/conf/pmlog/com.webos.service.videooutput.conf SYSCONFDIR pmlog.d)
+webos_build_configured_file(files/launch/com.webos.service.videooutput.conf SYSCONFDIR init)
+#webos_build_configured_file(files/launch/com.webos.service.videooutput.service SYSCONFDIR systemd/system/webos-cbd.target.wants)
+
+install(TARGETS ${BIN_NAME} DESTINATION ${WEBOS_INSTALL_SBINDIR})
 
 add_subdirectory(tests)
