@@ -103,8 +103,8 @@ bool VideoInfoMedia::set(pbnjson::JValue videoinfo)
     bool adaptive;
     std::string path;
     PIXEL_ASPECT_RATIO_T pixelAspectRatio;
-    VUI_T vui;
-    SEI_T sei;
+    VUI_T vui = {0,};
+    SEI_T sei = {0,};
     pbnjson::JValue pixelAspectRatio_jval;
     pbnjson::JValue vui_jval;
     pbnjson::JValue sei_jval;

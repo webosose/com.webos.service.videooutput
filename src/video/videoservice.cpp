@@ -753,11 +753,10 @@ pbnjson::JValue VideoService::getSupportedResolutions(LSHelpers::JsonRequest &re
 
     JsonParser parser{response};
     parser.get("returnValue", ret);
-    if (ret == true) {
-        parser.get("numConnector", numDisplay);
-    }
-    if (!parser.finishParse())
+
+    if (!ret || !parser.finishParse())
         return API_ERROR_SCHEMA_VALIDATION(parser.getError());
+    parser.get("numConnector", numDisplay);
 
     std::string dispStr = "disp";
     for (int i = 0; i < numDisplay; i++) {
