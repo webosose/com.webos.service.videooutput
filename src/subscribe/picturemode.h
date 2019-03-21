@@ -18,7 +18,7 @@
 
 #include "errors.h"
 #include <map>
-#include <pbnjson/cxx/JValue.h>
+#include <pbnjson.h>
 #include <string>
 
 const uint8_t MIN_SHARPNESS = 0;

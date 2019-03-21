@@ -16,7 +16,7 @@
 
 #pragma once
 
-#include <ls2-helpers/ls2-helpers.hpp>
+#include "ls2-helpers.hpp"
 
 // General service errors
 #define API_ERROR_UNKNOWN LSHelpers::ErrorResponse(1, "Unknown error")

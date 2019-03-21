@@ -18,7 +18,6 @@
 
 #include "videoinfotypes.h"
 #include <cmath>
-#include <ls2-helpers/ls2-helpers.hpp>
 #include <val_api.h>
 
 enum class ScanType { INTERLACED = 0, PROGRESSIVE = 1 };

@@ -18,7 +18,7 @@
 
 #include "aspectratiocontrol.h"
 #include "subscribeadapter.h"
-#include <ls2-helpers/ls2-helpers.hpp>
+#include "ls2-helpers.hpp"
 
 class AspectRatioSetting;
 class VideoService;

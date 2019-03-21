@@ -16,7 +16,7 @@
 
 #pragma once
 
-#include <ls2-helpers/ls2-helpers.hpp>
+#include "ls2-helpers.hpp"
 
 class VideoInfo
 {

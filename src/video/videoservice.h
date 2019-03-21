@@ -16,11 +16,11 @@
 
 #pragma once
 
-#include <ls2-helpers/ls2-helpers.hpp>
 #include <string>
 #include <unordered_map>
 #include <vector>
 
+#include "ls2-helpers.hpp"
 #include "aspectratiosetting.h"
 #include "picturesettings.h"
 #include "videoinfotypes.h"

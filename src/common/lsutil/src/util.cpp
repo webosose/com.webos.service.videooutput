@@ -14,26 +14,27 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 
-#pragma once
+#include <memory>
+#include "util.hpp"
 
-#include <string>
-#include <unordered_map>
-
-#include "videoservice.h"
-#include "ls2-helpers.hpp"
-
-class SystemPropertyService
+std::string string_format_valist(const std::string& fmt_str, va_list ap)
 {
-public:
-    SystemPropertyService(LS::Handle &handle, VideoService &video);
-    ~SystemPropertyService();
-    SystemPropertyService(const SystemPropertyService &) = delete;
-    SystemPropertyService &operator=(const SystemPropertyService &) = delete;
+	size_t n = fmt_str.size() * 2;
+	std::unique_ptr<char[]> formatted(new char[n]);
+	va_list apCopy;
+	va_copy(apCopy, ap);
 
-private:
-    // Luna handlers
-    pbnjson::JValue getProperties(LSHelpers::JsonRequest &request);
+	int final_n = vsnprintf(&formatted[0], n, fmt_str.c_str(), ap);
+	if (final_n < 0 || final_n >= (int)n)
+	{
+		/* There was not enough space, retry */
+		/* MS implements < 0 as not large enough */
+		n = (size_t) (abs(final_n) + 1);
 
-    LSHelpers::ServicePoint mService;
-    VideoService &mVideoService;
-};
+		formatted.reset(new char[n]);
+		vsnprintf(&formatted[0], n, fmt_str.c_str(), apCopy);
+	}
+	va_end(apCopy);
+
+	return std::string(formatted.get());
+}

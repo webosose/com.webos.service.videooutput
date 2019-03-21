@@ -16,24 +16,10 @@
 
 #pragma once
 
-#include <string>
-#include <unordered_map>
+#include <pbnjson.hpp>
+#include <luna-service2/lunaservice.h>
 
-#include "videoservice.h"
-#include "ls2-helpers.hpp"
-
-class SystemPropertyService
-{
-public:
-    SystemPropertyService(LS::Handle &handle, VideoService &video);
-    ~SystemPropertyService();
-    SystemPropertyService(const SystemPropertyService &) = delete;
-    SystemPropertyService &operator=(const SystemPropertyService &) = delete;
-
-private:
-    // Luna handlers
-    pbnjson::JValue getProperties(LSHelpers::JsonRequest &request);
-
-    LSHelpers::ServicePoint mService;
-    VideoService &mVideoService;
-};
+#include "jsonparser.hpp"
+#include "servicepoint.hpp"
+#include "subscriptionpoint.hpp"
+#include "persistentsubscription.hpp"

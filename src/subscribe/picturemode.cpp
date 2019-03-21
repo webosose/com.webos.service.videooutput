@@ -16,7 +16,7 @@
 
 #include "picturemode.h"
 #include "logging.h"
-#include <ls2-helpers/ls2-helpers.hpp>
+#include "ls2-helpers.hpp"
 
 using namespace pbnjson;
 const pbnjson::JValue PictureMode::defaultJson =
