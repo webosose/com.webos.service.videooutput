@@ -19,7 +19,7 @@
 SystemPropertyService::SystemPropertyService(LS::Handle &handle, VideoService &video)
     : mService(&handle), mVideoService(video)
 {
-    mService.registerMethod("/systemproperty", "getProperties", this, &SystemPropertyService::getProperties);
+    //mService.registerMethod("/systemproperty", "getProperties", this, &SystemPropertyService::getProperties);
 }
 
 SystemPropertyService::~SystemPropertyService() {}

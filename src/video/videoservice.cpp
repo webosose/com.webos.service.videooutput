@@ -54,13 +54,13 @@ VideoService::VideoService(LS::Handle &handle) : val(NULL), mService(&handle), m
     mService.registerMethod("/", "getStatus", this, &VideoService::getStatus);
 
     // TODO(ekwang): defined but not used except setCompositing and setDisplayWindow
-    mService.registerMethod("/display", "getVideoLimits", this, &VideoService::getVideoLimits);
+    //mService.registerMethod("/display", "getVideoLimits", this, &VideoService::getVideoLimits);
     mService.registerMethod("/display", "getOutputCapabilities", this, &VideoService::getOutputCapabilities);
-    mService.registerMethod("/display", "getSupportedResolutions", this, &VideoService::getSupportedResolutions);
+    //mService.registerMethod("/display", "getSupportedResolutions", this, &VideoService::getSupportedResolutions);
     mService.registerMethod("/display", "setDisplayWindow", this, &VideoService::setDisplayWindow);
-    mService.registerMethod("/display", "setDisplayResolution", this, &VideoService::setDisplayResolution);
+    //mService.registerMethod("/display", "setDisplayResolution", this, &VideoService::setDisplayResolution);
     mService.registerMethod("/display", "setCompositing", this, &VideoService::setCompositing);
-    mService.registerMethod("/display", "setParam", this, &VideoService::setParam);
+    //mService.registerMethod("/display", "setParam", this, &VideoService::setParam);
     mService.registerMethod("/display", "getParam", this, &VideoService::getParam);
 }
 
