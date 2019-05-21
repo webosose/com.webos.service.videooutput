@@ -11,33 +11,5 @@
     "com.webos.service.videooutput/display/setDisplayWindow",
     "com.webos.service.videooutput/display/setCompositing",
     "com.webos.service.videooutput/display/getParam"
-  ],
-
-  "public": [
-    "com.webos.service.videooutput/register",
-    "com.webos.service.videooutput/unregister",
-    "com.webos.service.videooutput/connect",
-    "com.webos.service.videooutput/disconnect",
-    "com.webos.service.videooutput/getStatus",
-    "com.webos.service.videooutput/setVideoData",
-    "com.webos.service.videooutput/blankVideo",
-    "com.webos.service.videooutput/display/getOutputCapabilities",
-    "com.webos.service.videooutput/display/setDisplayWindow",
-    "com.webos.service.videooutput/display/setCompositing",
-    "com.webos.service.videooutput/display/getParam"
-  ],
-
-  "private": [
-    "com.webos.service.videooutput/register",
-    "com.webos.service.videooutput/unregister",
-    "com.webos.service.videooutput/connect",
-    "com.webos.service.videooutput/disconnect",
-    "com.webos.service.videooutput/getStatus",
-    "com.webos.service.videooutput/setVideoData",
-    "com.webos.service.videooutput/blankVideo",
-    "com.webos.service.videooutput/display/getOutputCapabilities",
-    "com.webos.service.videooutput/display/setDisplayWindow",
-    "com.webos.service.videooutput/display/setCompositing",
-    "com.webos.service.videooutput/display/getParam"
   ]
 }
