@@ -705,6 +705,11 @@ pbnjson::JValue VideoService::setCompositing(LSHelpers::JsonRequest &request)
     // Input is good - set the zorders
     for (Composition &comp : composeOrdering) {
         VideoSink *vsink = this->getVideoSink(comp.sink);
+
+        if (!vsink) {
+            return API_ERROR_INVALID_PARAMETERS("Invalid sink value");
+        }
+
         vsink->opacity   = comp.opacity;
         vsink->zOrder    = comp.zOrder;
 
