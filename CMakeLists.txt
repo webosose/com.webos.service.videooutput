@@ -113,8 +113,7 @@ target_link_libraries(${BIN_NAME}
 #webos_build_daemon()
 webos_build_system_bus_files()
 webos_build_configured_file(files/conf/pmlog/com.webos.service.videooutput.conf SYSCONFDIR pmlog.d)
-webos_build_configured_file(files/launch/com.webos.service.videooutput.conf SYSCONFDIR init)
-#webos_build_configured_file(files/launch/com.webos.service.videooutput.service SYSCONFDIR systemd/system/webos-cbd.target.wants)
+webos_build_configured_file(files/launch/videooutputd.service SYSCONFDIR systemd/system/)
 
 install(TARGETS ${BIN_NAME} DESTINATION ${WEBOS_INSTALL_SBINDIR})
 
