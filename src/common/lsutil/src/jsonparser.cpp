@@ -220,7 +220,7 @@ void JsonParser::parseValue<uint64_t>(const JValue& value,
 	{
 		f |= CONV_POSITIVE_OVERFLOW;
 	}
-	else if (std::modf(val,&intVal) != 0)
+	else if (!!std::modf(val,&intVal))
 	{
 		f |= CONV_PRECISION_LOSS;
 	}
