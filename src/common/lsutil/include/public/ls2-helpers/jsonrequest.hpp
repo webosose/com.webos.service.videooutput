@@ -44,6 +44,9 @@ public:
 	{}
 
 	ErrorResponse(int error_code, const char* format, ...);
+
+	ErrorResponse& operator=(const ErrorResponse&) = delete; // no copy
+	ErrorResponse& operator=(ErrorResponse&&) = delete; // no move
 };
 
 /**
