@@ -1,6 +1,7 @@
 {
     "exeName":"@WEBOS_INSTALL_SBINDIR@/videooutputd",
     "type": "regular",
+    "trustLevel": "oem",
     "allowedNames": ["com.webos.service.videooutput"],
     "permissions": [
         {
